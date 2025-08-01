@@ -54,3 +54,6 @@ if __name__ == "__main__":
     app.run('localhost', 8016)
     bot.stop_bot()
     print('Stopping . . .')
+else:
+    thr = threading.Thread(target=bot.polling)
+    thr.start()
